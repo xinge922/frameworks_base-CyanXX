@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="25dip" >
+
+    <LinearLayout
+        android:id="@+id/clock_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dip"
+        android:baselineAligned="false"
+        android:gravity="top" >
+
+        <TextView
+            android:id="@+id/clock_hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.RingLockScreen.Clock.Hours" />
+
+        <TextView
+            android:id="@+id/clock_minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.RingLockScreen.Clock.Minutes" />
+
+        <TextView
+            android:id="@+id/clock_ampm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.RingLockScreen.Clock.AmPm" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.RingLockScreen.Date" />
+
+</LinearLayout>

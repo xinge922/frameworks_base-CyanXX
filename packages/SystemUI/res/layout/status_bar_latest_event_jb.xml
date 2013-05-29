@@ -1,0 +1,24 @@
+<com.android.systemui.statusbar.LatestItemContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <com.android.systemui.statusbar.LatestItemView android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/jelly_panel_notification_bg"
+            android:focusable="true"
+            android:clickable="true"
+            android:paddingRight="6sp"
+            >
+    </com.android.systemui.statusbar.LatestItemView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/jelly_statusbar_notification_divider_height"
+        android:background="@android:color/transparent"
+        />
+
+</com.android.systemui.statusbar.LatestItemContainer>
+

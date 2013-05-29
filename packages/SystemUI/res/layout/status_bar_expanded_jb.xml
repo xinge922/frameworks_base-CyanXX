@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* apps/common/assets/default/default/skins/StatusBar.xml
+**
+** Copyright 2006, The Android Open Source Project
+** Patched by Sven Dawitz; Copyright (C) 2011 CyanogenMod Project
+** Patched by Artem Chepurnoi; Copyright (C) 2012 GingerDX Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License"); 
+** you may not use this file except in compliance with the License. 
+** You may obtain a copy of the License at 
+**
+**     http://www.apache.org/licenses/LICENSE-2.0 
+**
+** Unless required by applicable law or agreed to in writing, software 
+** distributed under the License is distributed on an "AS IS" BASIS, 
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+** See the License for the specific language governing permissions and 
+** limitations under the License.
+*/
+-->
+
+<com.android.systemui.statusbar.ExpandedView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:descendantFocusability="afterDescendants"
+    >
+
+    <LinearLayout
+        android:id="@+id/power_and_carrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="3dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="3dp"
+        android:background="@color/jelly_statusbar_titlebar_background"
+        >        
+
+        <LinearLayout android:id="@+id/carrier_label_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+        >
+            <com.android.systemui.statusbar.StatusBarJellyHeaderView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+				
+            <ImageButton android:id="@+id/settings_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+			    android:layout_marginLeft="4dip"
+				android:background="@android:color/transparent"
+                android:src="@drawable/jelly_statusbar_settings_btn"	/>
+				
+			<ImageButton 
+                android:layout_width="0dip"
+                android:layout_height="1dip"
+                android:layout_weight="1"				
+				/>
+				
+            <ImageButton android:id="@+id/clear_all_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+			    android:layout_marginRight="4dip"
+				android:background="@android:color/transparent"
+                android:src="@drawable/jelly_statusbar_clear_btn"	/>
+        </LinearLayout>
+		
+		<com.android.systemui.statusbar.powerwidget.PowerWidget android:id="@+id/exp_power_stat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+			android:background="@color/jelly_statusbar_powerwidget_background"
+			android:layout_marginTop="5dip"
+			android:layout_marginBottom="5dip"
+            />
+        
+    </LinearLayout>
+    
+    <FrameLayout android:id="@+id/notifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadingEdge="none"
+            android:overScrollMode="ifContentScrolls"
+            >
+            <com.android.systemui.statusbar.NotificationLinearLayout
+                android:id="@+id/notificationLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+				
+                <LinearLayout android:id="@+id/ongoingItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    />
+					
+                <LinearLayout android:id="@+id/latestItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    />
+					
+            </com.android.systemui.statusbar.NotificationLinearLayout>
+        </ScrollView>
+        <ScrollView
+            android:id="@+id/bottomScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadingEdge="none"
+            android:overScrollMode="ifContentScrolls"
+            >
+            <com.android.systemui.statusbar.NotificationLinearLayout
+                android:id="@+id/bottomNotificationLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                />
+        </ScrollView>
+
+    </FrameLayout>
+</com.android.systemui.statusbar.ExpandedView>
